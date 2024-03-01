@@ -1,27 +1,14 @@
 # AngularViewEncapsulation
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
+# Encapsulation
+Encapsulation  means hiding data and behavior from outside world.
 
-## Development server
+# Types of Encapsulation:
+**1. ViewEncapsulation.Emulated (default)**
+    If the css property is set to parent component, the property will be added to its property only. Does not affect to other component.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**2. ViewEncapsulation.None**
+    If the css property is set to parent component, the property will be added to all child component.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**3. ViewEncapsulation.ShadowDom**
+    If the css is added to the global css (style.css), the property will be added to all the components but with this **ViewEncapsulation.ShadowDom** property in ts file, the component itself will not accept the global css property and work as a self shadom DOM property.
